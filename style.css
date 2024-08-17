@@ -1,0 +1,187 @@
+ 
+ *{
+    padding: 0;
+    margin: 0;
+ }
+
+ body{
+    background-color: grey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+ }
+/*--------------------------NavBar-------------------------*/
+
+.navbar {
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: black;
+   width:100%;
+   position: fixed;
+   font-size: 110%;
+   top:0px; 
+
+}
+
+.navbar-links ul {
+
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   padding-top: 12px;
+   padding-bottom: 12px;
+
+}
+
+.navbar-links ul li  {
+
+   color: white;
+}
+ 
+.navbar-links ul li a {
+
+   color: white;
+   text-decoration: none;
+   font-size: 110%;     
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 12px;
+   padding-bottom: 12px;
+ 
+}
+
+.navbar-links ul li a:hover{
+
+   background-color: rgb(62, 19, 154);
+   color: white;
+
+}
+
+/*-------Media Query for Navbar--------*/
+
+@media only screen and (max-width: 436px) {
+
+   .navbar-links ul li a {
+       
+      font-size: 80%;     
+    
+   }   
+    
+}
+
+
+ @media only screen and (max-width:364px) {
+
+   .navbar-links ul li a {
+
+      padding-left: 2px;
+      padding-right: 1px;
+     
+   }
+      
+ }
+
+/*----------------------------Container-------------------------------------*/
+
+#css, #javascript, #output{
+
+   padding-top: 45.8px;
+   display: none;
+
+}
+
+#html{
+   display: block;
+   padding-top: 46px;
+   
+}
+
+.Inner_html, .Inner_Css, .Inner_Js {
+
+   display: flex;
+   
+}
+
+p{
+
+   background-color: rgb(8, 145, 8);
+   color:white;
+   font-size: 110%;
+   font-weight:lighter;
+   padding-top: 5px;
+   padding-bottom: 3px;
+   padding-left: 5px;
+   display: flex;
+   align-items: center;
+   width: 100%;
+
+}
+
+span{
+
+   padding-left: 5px;
+    
+}
+
+
+#bt11, #bt21, #bt31  {
+
+   border: 2px solid rgb(149, 82,0);
+   cursor: pointer;
+   width: 3rem;
+   color: white;
+   background-color: rgb(149, 82, 0); 
+   gap: 30px;
+  
+}
+
+#bt12,  #bt22, #bt32 {
+
+   border: 2px solid  rgb(84, 42, 0) ;
+   color: white;
+   cursor: pointer;
+   width: 3rem;
+   background-color: rgb(84, 42, 0); 
+   gap: 30px;
+
+}
+ 
+#bt11:hover,#bt21:hover, #bt31:hover{
+   border: 2px solid bisque;
+   color: white;
+   transition: 0.3s;
+ 
+}
+
+#bt12:hover,#bt22:hover, #bt32:hover{
+   border: 2px solid bisque;
+   color: white;
+   transition: 0.3s;
+ 
+}
+
+
+#html-code, #css-code, #js-code {
+   
+    height:80rem;
+    width:100%;
+    background-color: rgb(59, 37, 37);
+    color: white;
+    font-size: 150%;
+ }
+
+#out-code{
+
+   width: 100%;
+   height:50rem;
+   background-color: white;
+
+}
+
+
+   
+ 
+
+
+ 

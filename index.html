@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ 
+</head>
+<body>
+
+<!---------------------Navbar------------------->
+
+    <nav class="navbar">
+        <div class="navbar-links">
+            <ul>
+                <li onclick="done_html()"><a  href="#html">HTML</a></li>
+                <li>|</li>
+                <li onclick="done_css()"><a href="#css">CSS</a></li>
+                <li>|</li>
+                <li onclick="done_js()"><a href="#javascript">JavaScript</a></li>
+                <li>|</li>
+                <li onclick="done_out()" id="out"><a href="#output">Run <i class="fa-sharp fa-solid fa-play"></i> </a></li>
+                 
+            </ul>
+        </div>
+    </nav>
+
+<!---------------------Container------------------->
+
+<div class="container">
+  
+
+        <div id="html">
+            <div class="Inner_html">
+                <p> <i class="fa-brands fa-html5 fa-1x"  ></i>  <span>HTML</span> </p>
+                <button id="bt11" onclick="copy_html()">Copy</button>
+                <button id="bt12" onclick="clear_html()"> Clean</button>
+            </div> 
+            <textarea id="html-code" onkeyup="run()"></textarea>
+         </div>
+       
+        <div id="css">
+            <div class="Inner_Css">
+                <p > <i class="fa-brands fa-css3-alt"></i> <span>CSS</span> </p>
+                <button id="bt21" onclick="copy_css()">Copy</button>
+                <button id="bt22" onclick="clear_css()"> Clean</button>
+            </div>
+             <textarea id="css-code" onkeyup="run()"></textarea>
+        </div>
+
+        <div id="javascript">
+            <div class="Inner_Js">
+                <p><i class="fa-brands fa-js"></i> <span>JavaScript</span></p>
+                <button id="bt31" onclick="copy_js()">Copy</button>
+                <button id="bt32" onclick="clear_js()"> Clean</button>
+            </div>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+        </div>
+
+        <div id="output">
+            <p><i class="fa-solid fa-globe"></i> <span>Browser</span></p>
+            <iframe id="out-code"></iframe>
+        </div>
+        
+
+</div>   
+    
+</body>
+</html>
