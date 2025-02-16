@@ -1,14 +1,18 @@
-
-function run()
-{
-    let htmlCode = document.getElementById("html-code").value;
-    let cssCode = document.getElementById("css-code").value;
-    let jsCode = document.getElementById("js-code").value;
+ 
+function run() {
+    // Get the user input from the HTML, CSS, and JavaScript textareas
+    let htmlCode = document.getElementById("html-code").value;  // Fetches the HTML code input
+    let cssCode = document.getElementById("css-code").value;    // Fetches the CSS code input
+    let jsCode = document.getElementById("js-code").value;      // Fetches the JavaScript code input
+    
+    // Get the output iframe where the code will be displayed
     let output = document.getElementById("out-code");
 
-    output.contentDocument.body.innerHTML = htmlCode + "<style>" +cssCode+ "</style>";
-    output.contentWindow.eval(jsCode);
+    // Inject HTML and CSS into the iframe's body
+    output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
 
+    // eval function Execute the JavaScript code inside the iframe
+    output.contentWindow.eval(jsCode);
 }
 
 
@@ -80,36 +84,64 @@ function clear_js()
 //---------------------Copy-Textarea------------------>
 
 
+ 
 
 function copy_html() {
-    
-    // Get the textarea element
-    var textarea = document.getElementById("html-code");
 
-    // Select the text inside the textarea
-    textarea.select();
-    textarea.setSelectionRange(0, 99999); // For mobile devices
+    // Get the textarea element by its ID
+    var textarea = document.getElementById("html-code").value;
 
-    // Copy the text to the clipboard
-    document.execCommand("copy");
- 
+    // Use the Clipboard API to copy the text inside the textarea
+    navigator.clipboard.writeText(textarea)
+
+        .then(() => {
+            // Show an alert when copying is successful
+            alert("Copied to clipboard!");
+        })
+        
+        .catch(err => {
+            // Log an error message if copying fails
+            alert("Failed to copy:", err);
+            
+        });
 }
+
 
 function copy_css() {
 
-    var textarea = document.getElementById("css-code");
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);  
-    document.execCommand("copy");
+    var textarea = document.getElementById("css-code").value;
+
+    // Use the Clipboard API to copy the text inside the textarea
+    navigator.clipboard.writeText(textarea)
+
+        .then(() => {
+            // Show an alert when copying is successful
+            alert("Copied to clipboard!");
+        })
+
+        .catch(err => {
+            // Log an error message if copying fails
+             alert("Failed to copy:", err);
+        });
 
 }
 
 function copy_js() {
+    
+    var textarea = document.getElementById("js-code").value;
 
-    var textarea = document.getElementById("js-code");
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);  
-    document.execCommand("copy");
+    // Use the Clipboard API to copy the text inside the textarea
+    navigator.clipboard.writeText(textarea)
+
+        .then(() => {
+            // Show an alert when copying is successful
+            alert("Copied to clipboard!");
+        })
+
+        .catch(err => {
+            // Log an error message if copying fails
+            alert("Failed to copy:", err);
+        });
  
 }
 
